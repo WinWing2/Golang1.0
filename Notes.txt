@@ -1,0 +1,4 @@
+Позже изучить:
+fmt.Println() \r \a
+big.int для задачи 8
+packages: bufio, os
