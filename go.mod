@@ -1,3 +1,2 @@
-module G/Goland/golang1.0
-
+module G/Goland/EulersTasks
 go 1.22.1

@@ -22,7 +22,6 @@ func euler_8(n int, s string) int {
 }
 
 func main() {
-
 	fmt.Printf("\n\t Решение задачек: ")
 	fmt.Printf("\n\t euler_1 | sum = %v", euler_1(1000))
 	fmt.Printf("\n\t euler_2 | sum = %v", euler_2(4_000_000))
