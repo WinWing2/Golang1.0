@@ -1,14 +1,14 @@
 package main
 
-// Считает простое число номера numberOfPrimeNumber, предел поиска searchingLimit
-func euler_7(numberOfPrimeNumber, searchingLimit int) (numberValue, primeSerialNumber int) {
-	currentNumberOfPrimeNumber := 0
-	primeNumberValue := 0
-	for i := 1; currentNumberOfPrimeNumber < numberOfPrimeNumber && i < searchingLimit; i++ {
-		if len(findSimpleDividers(i)) == 2 && i > primeNumberValue {
-			primeNumberValue = i
-			currentNumberOfPrimeNumber++
+// Считает простое число номера serialNumber, предел поиска searchingLimit
+func euler_7(serialNumber, searchingLimit int) (primeNumberValue, primesFound int) {
+	primeNumbersFound := 0
+	biggestPrimeNumberFound := 0
+	for i := 1; primeNumbersFound < serialNumber && i < searchingLimit; i++ {
+		if len(findSimpleDividers(i)) == 1 {
+			biggestPrimeNumberFound = i
+			primeNumbersFound++
 		}
 	}
-	return primeNumberValue, currentNumberOfPrimeNumber
+	return biggestPrimeNumberFound, primeNumbersFound
 }
