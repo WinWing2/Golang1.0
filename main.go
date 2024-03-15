@@ -22,5 +22,5 @@ func main() {
 
 	//fmt.Printf("\n\t euler_9 | multiplication = %v", euler_9(1000))
 
-	fmt.Printf("\n\t euler_10 | sum = %v", euler_10(2_000))
+	//fmt.Printf("\n\t euler_10 | sum = %v", euler_10(2_000_000))
 }

@@ -15,7 +15,6 @@ func euler_5(x int) int {
 		for i := range currentNumberDivider {
 			if currentNumberDivider[i] > totalDividers[i] {
 				totalDividers[i] = currentNumberDivider[i]
-				//fmt.Println("Содержимое totalDividers = ", totalDividers)
 			}
 		}
 		for i := range currentNumberDivider {

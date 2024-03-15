@@ -19,6 +19,28 @@ func findSimpleDividers(x int) []int {
 	return dividers
 }
 
+// Ищет все простые числа от 1 до N (включительно)
+func findPrimeNumbers(limit int) []int {
+	limit++
+	numbersBeforeCheck := make([]bool, limit)
+	var numbersAfterCheck []int
+	checklimit := int(math.Sqrt(float64(limit))) + 1
+	for i := 2; i < checklimit; i++ {
+		if !numbersBeforeCheck[i] {
+			for k := 2 * i; k < limit; k += i {
+				numbersBeforeCheck[k] = true
+			}
+		}
+	}
+	for i := range numbersBeforeCheck {
+		if !numbersBeforeCheck[i] {
+			numbersAfterCheck = append(numbersAfterCheck, i)
+		}
+	}
+	numbersAfterCheck = numbersAfterCheck[2:]
+	return numbersAfterCheck
+}
+
 func palindromCheck(s string) bool {
 	slisedString := make([]string, len(s))
 	slisedString = strings.Split(s, "")
