@@ -42,15 +42,14 @@ func findPrimeNumbers(limit int) []int {
 }
 
 func palindromCheck(s string) bool {
-	slisedString := make([]string, len(s))
-	slisedString = strings.Split(s, "")
+	slisedString := strings.Split(s, "")
 	reversedSlisedString := make([]string, len(s))
 	copy(reversedSlisedString, slisedString)
 	slices.Reverse(reversedSlisedString)
 	return slices.Equal(slisedString, reversedSlisedString)
 }
 
-// Ищет все числа формата a^2 + b^2 = c^2, вплоть до лимита N
+/*Ищет все числа формата a^2 + b^2 = c^2, вплоть до лимита N
 // Способ вывести значения на экран
 // pifagors := pifagorNumbersGenerator(100)
 //
@@ -83,3 +82,4 @@ func pifagorNumbersGenerator(limit int) (numbers [][]int) {
 	}
 	return pifagors
 }
+*/
